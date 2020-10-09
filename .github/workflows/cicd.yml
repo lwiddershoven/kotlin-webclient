@@ -19,7 +19,7 @@ jobs:
           java-version: 11
       - name: mvn compile
         # -B : batch mode (non-interactive)
-        # -D... Remove all these "Downloading / Downloaded" messages.A
+        # -D... Remove all these "Downloading / Downloaded" messages.
         run: mvn -B compile --file pom.xml -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
       - name: mvn test
         run: mvn -B test --file pom.xml -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
